@@ -1,9 +1,48 @@
-.navbar-custom {
-    background-color: #DDE6ED;
-    height: 70px;
-}
-
 body {
     background-color: #DDE6ED;
 }
+
+@font-face {
+    font-family: 'PostNoBillsJaffna-Medium';
+    src: local('PostNoBillsJaffna'),
+         url('/static/fonts/PostNoBillsJaffna-Medium.ttf') format("truetype");
+
+  }
+
+.navbar-custom {
+    background-color: #DDE6ED;
+    font-family: 'PostNoBillsJaffna-Medium';
+    font-size: 20px;
+    height: 70px;
+}
+
+.navbar .nav-link.active {
+    position: relative;
+    z-index: 1;
+}
+  
+.navbar .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Adjust the position as needed */
+    left: 0;
+    width: 100%; /* Adjust the size as needed */
+    height: 150%; /* Adjust the size as needed */
+    background-color: #27374D; /* Set the color for the square */
+    z-index: -1; /* Push the square behind the text */
+}
+
+.navbar .nav-link.active span {
+    color: #ece7e7;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
   
