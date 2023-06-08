@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 def projects(request):
-    return render(request,'index.html')
+    return render(request,'projects.html')
 

@@ -1,5 +1,6 @@
 body {
     background-color: #DDE6ED;
+
 }
 
 @font-face {
@@ -9,6 +10,7 @@ body {
 
   }
 
+
 .navbar-custom {
     background-color: #DDE6ED;
     font-family: 'PostNoBillsJaffna-Medium';
@@ -16,26 +18,67 @@ body {
     height: 70px;
 }
 
+.navbar-custom .nav-link:hover{
+    text-decoration: underline;
+}
+
+
 .navbar .nav-link.active {
     position: relative;
     z-index: 1;
 }
   
-.navbar .nav-link.active::after {
+.navbar .nav-link.active::after{
     content: "";
     position: absolute;
-    bottom: 0; /* Adjust the position as needed */
+    bottom: 0; 
     left: 0;
-    width: 100%; /* Adjust the size as needed */
-    height: 150%; /* Adjust the size as needed */
-    background-color: #27374D; /* Set the color for the square */
-    z-index: -1; /* Push the square behind the text */
+    width: 100%; 
+    height: 150%; 
+    background-color: #27374D; 
+    z-index: -1; 
 }
 
 .navbar .nav-link.active span {
     color: #ece7e7;
     text-decoration: underline;
 }
+
+.container { 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.text-container  {
+    display: inline;
+}
+
+.text {
+    font-size: 3.5em;
+    font-family: monospace;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s steps(28),
+        cursor .4s step-end infinite alternate;
+    position: relative;
+}
+
+/* cursor blinking */
+@keyframes cursor {
+    50% { border-color: transparent }
+}
+
+/* typing effect */
+@keyframes typing {
+    from {width: 0 }
+}
+
 
 
 
