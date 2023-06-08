@@ -61,7 +61,7 @@ body {
 }
 
 .text-container  {
-    display: inline;
+    display: inline-block;
 }
 
 .text {
@@ -107,8 +107,37 @@ body {
     }
 }
 
-
-
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .slider img {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    margin: 0 10px; /* Adjust as needed */
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .prev-button {
+    left: 10px; /* Adjust as needed */
+  }
+  
+  .next-button {
+    right: 10px; /* Adjust as needed */
+  }
 
 
 

@@ -6,3 +6,5 @@ from django.http import HttpResponse
 def home(request):
     return render(request,'index.html')
 
+def carousel(request):
+    return render(request, 'about.html')
