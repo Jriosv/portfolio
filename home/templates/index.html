@@ -1,17 +1,22 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block head_content %}
+    <!-- Include JavaScript code for the description section-->
+    <script src="{% static 'js/description.js' %}"></script>
+{% endblock %}
 
 {% block content %}
     <!-- Content specific to your current app -->
     <div class="container">
+
         <span class="text-container">
-            <p class="text">Hi, I'm Julian Rios Vasquez.</p>
-        </p>
+            <p class="text">Hi, I'm Julian Rios.</p>
+        </span>
+
+        <span class="description">
+            <p> Software Engineer with  4+ years of experience building high performance software solutions to support companies growth. High skills in back-end  and  automation  fields. Always  willing to learn new things and bring my  knowledge to  others,  convinced the best way  to  learn  is teaching and receiving feedback</p>
+        </span>
     </div>
-
-    <div class="container">
-        <p> Software Engineer with  4+ years of experience building high performance software solutions to support companies growth. High skills in back-end  and  automation  fields. Always  willing to learn new things and bring my  knowledge to  others,  convinced the best way  to  learn  is teaching and receiving feedback</p>
-    </div>
-
-
-
+   
 {% endblock %}

@@ -8,7 +8,14 @@ body {
     src: local('PostNoBillsJaffna'),
          url('/static/fonts/PostNoBillsJaffna-Medium.ttf') format("truetype");
 
-  }
+}
+
+@font-face {
+    font-family: 'Pridi-Regular';
+    src: local('PostNoBillsJaffna'),
+         url('/static/fonts/Pridi-Regular.ttf') format("truetype");
+
+}
 
 
 .navbar-custom {
@@ -48,6 +55,7 @@ body {
     text-align: center;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 50vh;
 }
@@ -58,13 +66,13 @@ body {
 
 .text {
     font-size: 3.5em;
-    font-family: monospace;
+    font-family: 'Pridi-Regular';
     border-right: 5px solid;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     animation: 
-        typing 2s steps(28),
+        typing 2s steps(20),
         cursor .4s step-end infinite alternate;
     position: relative;
 }
@@ -77,6 +85,26 @@ body {
 /* typing effect */
 @keyframes typing {
     from {width: 0 }
+}
+
+.description {
+    font-family: 'PostNoBillsJaffna-Medium';
+    font-size: 20px;
+    width: 70%;
+    text-align: justify;
+    opacity: 0;
+    animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
 }
 
 
